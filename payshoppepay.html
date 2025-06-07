@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pembayaran via QRIS</title>
+  <title>Pembayaran via SHOPPE PAY</title>
   <style>
     body {
       margin: 0;
@@ -67,18 +67,30 @@
       opacity: 0;
     }
 
-    .qris-img {
-      width: 100%;
-      max-width: 300px;
-      border: 6px solid white;
-      border-radius: 12px;
-      animation: pulse 2s infinite;
+    .gopay-number {
+      font-size: 20px;
+      font-weight: bold;
+      background: rgba(255,255,255,0.2);
+      padding: 15px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 15px;
+      user-select: all;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5); }
-      70% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+    .copy-btn {
+      background-color: #ffffff;
+      color: #2D2DFF;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .copy-btn:hover {
+      background-color: #d1d1ff;
     }
 
     .note {
@@ -98,7 +110,7 @@
     }
 
     footer a {
-      color: #00c2ff; /* Mengubah warna tautan menjadi biru */
+      color: #00c2ff;
       text-decoration: none;
       margin: 0 10px;
     }
@@ -106,37 +118,28 @@
     footer a:hover {
       text-decoration: underline;
     }
-
-    footer .social-icons {
-      margin-top: 10px;
-    }
-
-    footer .social-icons a {
-      font-size: 18px;
-      margin: 0 10px;
-      color: #333333;
-    }
-
-    footer .social-icons a:hover {
-      color: #00c2ff;
-    }
-
-
-    @keyframes fadeInFooter {
-      to {
-        opacity: 1;
-      }
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://files.catbox.moe/3is3vh.jpg" alt="Logo QRIS" class="logo"/>
-    <div class="title">Transfer ke QRIS</div>
-    <div class="desc">Silakan scan kode QRIS di bawah ini untuk melakukan pembayaran 𝕼rіsᥲᥣᥣ⍴ᥲᥡ  𝕱ᥱᥱ  +1.000.</div>
-    <img src="https://files.catbox.moe/rx3uia.jpg" alt="QRIS Image" class="qris-img" />
+    <img src="https://files.catbox.moe/c8nlrn.jpg" alt="Logo SHOPPE PAY" class="logo"/>
+    <div class="title">Transfer ke Nomor SHOPPE PAY</div>
+    <div class="desc">Silakan salin nomor SHOPPE PAY di bawah ini dan lakukan pembayaran manual 𝕾һ᥆⍴⍴ᥱ⍴ᥲᥡ 𝕱ᥱᥱ +200p.</div>
+    <div class="shoppepay-number" id="shoppePayNumber">0813 2826 8112</div>
+    <br>
+    <button class="copy-btn" onclick="copySHOPPEPAY()">Salin Nomor</button>
     <div class="note">Pastikan nominal sudah sesuai sebelum melakukan pembayaran.</div>
   </div>
-  <footer>&copy; 2025 QRIS Payment Gateway - Pluvieana</footer>
+
+  <footer>&copy; 2025 SHOPPE PAY Payment Gateway - Pluvieana</footer>
+
+  <script>
+    function copySHOPPEPAY() {
+      const number = document.getElementById("shoppePayNumber").textContent;
+      navigator.clipboard.writeText(number).then(() => {
+        alert("Nomor SHOPPE PAY disalin!");
+      });
+    }
+  </script>
 </body>
 </html>

@@ -26,9 +26,9 @@ function startBankJagoPayment() {
     window.location.href = "paybankjago.html"; // Change to actual OVO payment URL
 }
 
-function startShopeePayPayment() {
+function startShoppePayPayment() {
     // Simulate payment logic for SHOPEE PAY
-    alert("Redirecting to SHOPEE PAY payment...");
+    alert("Redirecting to SHOPPE PAY payment...");
     // You can replace this with actual payment logic
-    window.location.href = "payshopeepay.html"; // Change to actual SHOPEE PAY payment URL
+    window.location.href = "payshoppepay.html"; // Change to actual SHOPEE PAY payment URL
 }
