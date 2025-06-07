@@ -19,9 +19,16 @@ function startGopayPayment() {
     window.location.href = "paygopay.html"; // Change to actual GOPAY payment URL
 }
 
-function startOvoPayment() {
-    // Simulate payment logic for OVO
-    alert("Redirecting to GOPAY payment...");
+function startBankJagoPayment() {
+    // Simulate payment logic for BANK JAGO
+    alert("Redirecting to BANK JAGO payment...");
     // You can replace this with actual payment logic
-    window.location.href = "payovo.html"; // Change to actual OVO payment URL
+    window.location.href = "paybankjago.html"; // Change to actual OVO payment URL
+}
+
+function startShopeePayPayment() {
+    // Simulate payment logic for SHOPEE PAY
+    alert("Redirecting to SHOPEE PAY payment...");
+    // You can replace this with actual payment logic
+    window.location.href = "payshopeepay.html"; // Change to actual SHOPEE PAY payment URL
 }
